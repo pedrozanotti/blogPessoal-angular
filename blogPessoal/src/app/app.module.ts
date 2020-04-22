@@ -8,7 +8,7 @@ import { FeedComponent } from './feed/feed.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HttpClienteModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,7 @@ import { HttpClienteModule } from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClienteModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
