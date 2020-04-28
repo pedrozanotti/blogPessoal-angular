@@ -11,6 +11,8 @@ export class FeedComponent implements OnInit {
 
 listaPostagens: Postagem []
 
+postagem: Postagem = new Postagem
+
   constructor(private postagemService: PostagemService) { }
 
   ngOnInit() {
@@ -23,4 +25,11 @@ listaPostagens: Postagem []
     })
   }
 
+
+  publicar(){
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
+      this.postagem = resp
+      location.assign('/feed')
+     })
+  }
 }
