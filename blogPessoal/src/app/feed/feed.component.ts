@@ -9,6 +9,9 @@ import { Postagem } from '../model/postagem';
 })
 export class FeedComponent implements OnInit {
 
+  key = 'data'
+  reverse = true
+
 listaPostagens: Postagem []
 
 postagem: Postagem = new Postagem
@@ -17,6 +20,7 @@ postagem: Postagem = new Postagem
 
   ngOnInit() {
     this.findallPostagens ()
+    window.scroll(0, 0)
   }
 
   findallPostagens(){
