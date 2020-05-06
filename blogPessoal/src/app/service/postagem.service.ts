@@ -11,7 +11,7 @@ export class PostagemService {
   constructor(private http: HttpClient) { }
 
   /* 
-  CRUD- Create(post), Ready(get), Update(put) e Delete(delete)
+  CRUD- Create(post), Read(get), Update(put) e Delete(delete)
   */
 
   getAllPostagens(){
@@ -21,5 +21,15 @@ export class PostagemService {
   postPostagem(postagem: Postagem) {
     return this.http.post('http://31.220.57.14:8080/postagens', postagem)
   }
+
+  putPostagem (postagem: Postagem) {
+    return this.http.put('http://31.220.57.14:8080/postagens', postagem)
+
+
+  }
+
+ getByIdPostagem(id:number){
+   return this.http.get(`http://31.220.57.14:8080/postagens/${id}`)
+ }
 
 }

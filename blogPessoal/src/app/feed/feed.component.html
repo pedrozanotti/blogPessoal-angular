@@ -65,7 +65,23 @@
          reverse">
 
              <div class="card-header">
-                <h5 class="card-tittle"> {{postagem.titulo}} </h5>
+
+                <div class="row">
+
+                    <div class="col md-8">
+                        <h5 class="card-tittle"> {{postagem.titulo}} </h5>
+                    </div>
+
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <button class="btn btn-outline-info" [routerLink] = "['/editar', postagem.id]">
+                            Editar
+                     </button> 
+                    </div>
+                </div>
+                
+
+                
+
              </div>
 
              <div class="card-body">

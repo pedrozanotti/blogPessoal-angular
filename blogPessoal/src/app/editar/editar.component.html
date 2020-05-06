@@ -1,0 +1,61 @@
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+
+            <div class="card border-0" style="width: 18rem;">
+
+                <div class="d-flex justify-content-center">
+                    <img src="https://avatars3.githubusercontent.com/u/61565289?s=460&u=288b382e32040a6febc7c5f16ad470030a9f86c7&v=4"
+                        class="card-img-top rounded-circle w-75" alt="...">
+                </div>
+
+                <div class="card-body">
+
+                    <h5 class="card-title text-center">Pedro Zanotti</h5>
+
+                    <p class="card-text text-center">Estudante de desenvolvimento Web Front-end na Generation Brasil.
+                    </p>
+
+                    <a href="https://twitter.com/floidthebarber"
+                        class="btn btn-outline-info d-flex justify-content-center mb-3" target="_blank">Twitter</a>
+
+                    <a href="https://github.com/pedrozanotti" class="btn btn-outline-dark d-flex justify-content-center"
+                        target="_blank">Github</a>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <div>
+                <h3 class="text-center mb-4 text-monospace">Edição de postagem</h3>
+
+                <div class="form-group">
+
+                    <label for="titulo" class="text-monospace">Título:</label>
+                    <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite seu título"
+                        [(ngModel)]="postagem.titulo">
+                </div>
+                <div class="form-group">
+                    <label for="texto" class="text-monospace">Texto:</label>
+                    <textarea name="texto" id="texto" cols="30" rows="4" class="form-control"
+                        placeholder="Digite seu texto" [(ngModel)]="postagem.texto"></textarea>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <button type="menu" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
