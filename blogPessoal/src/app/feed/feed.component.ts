@@ -18,6 +18,8 @@ postagem: Postagem = new Postagem
 
 alerta:boolean = false
 
+titulo:string
+
   constructor(private postagemService: PostagemService) { }
 
   ngOnInit() {
@@ -50,4 +52,11 @@ alerta:boolean = false
       location.assign('/feed')
      })
   }
+
+  pesquisarPorTitulo(){
+    this.postagemService.findByTitulo(this.titulo).subscribe((resp: Postagem[])=>{
+      this.listaPostagens = resp
+    })
+  }
+
 }
