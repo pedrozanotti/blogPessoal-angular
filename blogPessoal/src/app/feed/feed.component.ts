@@ -16,12 +16,26 @@ listaPostagens: Postagem []
 
 postagem: Postagem = new Postagem
 
+alerta:boolean = false
+
   constructor(private postagemService: PostagemService) { }
 
   ngOnInit() {
     this.findallPostagens ()
     window.scroll(0, 0)
-  }
+   let item:string = localStorage.getItem('delOk')
+   
+   if (item == "true"){
+     this.alerta = true
+     localStorage.clear()
+
+
+     setTimeout(()=>{
+       location.assign('/feed')
+     }, 3000)
+     
+   }
+  } 
 
   findallPostagens(){
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
